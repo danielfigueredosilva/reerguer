@@ -6,7 +6,7 @@ export default function Login() {
     <View style={{ flex: 1, alignitems:'center', justifycontent:'center'}}>
       <Text>Tela inicial</Text>
 
-      <Link href="../login/index" style={{ margin: 10,color:'blue' }}>
+      <Link href="/dashboard" style={{ margin: 10,color:'blue' }}>
         <Text>Logar</Text>
       </Link>
     </View>
