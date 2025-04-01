@@ -6,7 +6,7 @@ export default function Dashboard() {
     <View style={{ flex: 1, alignitems:'center',justifycontent:'center'}}>
       <Text>Dashboard</Text>
 
-      <Link href="../dashboard/index" style={{ margin: 10, color:'blue' }}>
+      <Link href="../login/index" style={{ margin: 10, color:'blue' }}>
         <Text>Voltar para login</Text>
       </Link>
          
