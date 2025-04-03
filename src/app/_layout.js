@@ -9,16 +9,16 @@ export default function Layout() {
 
         },
 
-        headerTintColor: "#FFF",// texto do header
+        headerTintColor: "#fff",// texto do header
         headerLeft: () => null, //remove a seta de voltar de todas as telas
       }}
     >
       <Stack.Screen name="index" options={{ title: "Login"}}/>
-      {/* <Stack.Screen name="dashboard" options={{ title: "Dashboard" }}/>
+      <Stack.Screen name="dashboard" options={{ title: "Dashboard" }}/>
       <Stack.Screen name="oferecer_ajuda" options={{ title: "Oferecer Ajuda" }}/>
       <Stack.Screen name="pedir_ajuda" options={{ title: "Pedir Ajuda" }}/>
-      <Stack.Screen name="brigos" options={{ title: "Abrigos" }} /> */}
-      <Stack.Screen name="(tabs)"  options={{ headerShown: false, headerLeft:() => null, }}/>
+      <Stack.Screen name="brigos" options={{ title: "Abrigos" }} />
+      <Stack.Screen name="(tabs)"  options={{ headerShown: false, headerLeft:() => null, }}/> 
     </Stack>
   )
 }
