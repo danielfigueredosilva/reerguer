@@ -1,21 +1,36 @@
+// Importa o componente Tabs para criar uma navegação em abas (barra inferior)
 import { Tabs } from 'expo-router';
-import { MaterialIcons } from 'react-native-vector-icons';
+// Importa os ícones do Material Icons
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ headerShown: false }}>
-      {/* Painel */}
+    <Tabs
+      screenOptions={{
+        headerShown: false, // Oculta o cabeçalho em todas as abas
+        tabBarActiveTintColor: '#1E90FF', // Cor do ícone ativo
+        tabBarInactiveTintColor: '#aaa', // Cor do ícone inativo
+        tabBarStyle: {
+          backgroundColor: '#121212', // Cor de fundo da barra de abas
+          borderTopColor: '#333', // Borda superior da tab bar
+        },
+        tabBarLabelStyle: {
+          fontSize: 12, // Tamanho do texto abaixo dos ícones
+        },
+      }}
+    >
+      {/* Aba: Painel principal */}
       <Tabs.Screen
-        name="dashboard/index"
+        name="dashboard/index" // Caminho do arquivo: app/(tabs)/dashboard/index.js
         options={{
-          title: 'Painel',
+          title: 'Painel', // Título mostrado na tab
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="dashboard" size={size} color={color} />
           ),
         }}
       />
 
-      {/* Oferecer Ajuda */}
+      {/* Aba: Oferecer Ajuda */}
       <Tabs.Screen
         name="oferecer_ajuda/index"
         options={{
@@ -26,18 +41,18 @@ export default function TabLayout() {
         }}
       />
 
-      {/* Pedir Ajuda */}
+      {/* Aba: Pedir Ajuda */}
       <Tabs.Screen
         name="pedir_ajuda/index"
         options={{
           title: 'Pedir',
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="help" size={size} color={color} />
+            <MaterialIcons name="help-outline" size={size} color={color} />
           ),
         }}
       />
 
-      {/* Abrigos */}
+      {/* Aba: Abrigos */}
       <Tabs.Screen
         name="abrigos/index"
         options={{
