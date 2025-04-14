@@ -4,7 +4,7 @@ import SelectDropdown from 'react-native-select-dropdown';
 import { useState } from 'react';
 
 export default function Pedir_ajuda() {
-  const [pedido, setPedido] = useState("");
+  const [ pedido, setPedido ] = useState("");
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
