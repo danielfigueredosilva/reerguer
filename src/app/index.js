@@ -23,7 +23,7 @@ export default function Login() {
     }
 
     // Verifica se os dados inseridos são iguais ao usuário e senha definidos
-    if (username === 'admin' && password === '1234') {
+    if (username === 'usuario' && password === '1234') {
       Alert.alert('Sucesso', 'Login realizado com sucesso!');
       // Se estiver tudo certo, redireciona o usuário para a tela /dashboard
       router.push('/dashboard');
