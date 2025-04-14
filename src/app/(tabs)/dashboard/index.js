@@ -1,20 +1,37 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { DashboardCard } from '../../../components/DashBoardCard'; // importa como componente nomeado
-import { Ionicons } from '@expo/vector-icons'; // Para adicionar um ícone ao header
+import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
+import { useState } from 'react';
+import { Ionicons } from '@expo/vector-icons';
+import { DashboardCard } from '../../../components/DashBoardCard';
 
 export default function Dashboard() {
+  const [showNotificationText, setShowNotificationText] = useState(false);
+
   return (
     <View style={styles.container}>
-      
-      <View style={styles.notification}>
-        <Text style={styles.notificationText}>
-          Alerta: Risco de enchente em Chernobyll
-        </Text>
+      {/* Header */}
+      <View style={styles.headerContainer}>
+        <Ionicons name="cloud" size={30} color="#FF6347" />
+        <Text style={styles.header}>SOS Chuvas</Text>
+        
+        <Ionicons name="warning" size={30} color="#FF6347" />
       </View>
 
-      <View style={styles.headerContainer}>
-        
-        <Text style={styles.header}>SOS Chuvas ⚠️</Text>
+      {/* Notificação abaixo do header */}
+      <View style={styles.notificationWrapper}>
+        <Pressable
+          onPress={() => setShowNotificationText(!showNotificationText)}
+          style={[
+            styles.notification,
+            showNotificationText && styles.notificationExpanded,
+          ]}
+        >
+          <Ionicons name="warning" size={24} color="white" />
+          {showNotificationText && (
+            <Text style={styles.notificationText}>
+              Alerta: Risco de enchente em [Cidade]
+            </Text>
+          )}
+        </Pressable>
       </View>
 
       <Text style={styles.subtext}>O que você deseja fazer?</Text>
@@ -36,34 +53,41 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingHorizontal: 20,
   },
+  notificationWrapper: {
+    alignItems: 'flex-start',
+    marginBottom: 20,
+  },
   notification: {
     backgroundColor: '#FF4500',
-    paddingVertical: 12,
-    paddingHorizontal: 15,
-    marginBottom: 20,
+    padding: 10,
+    borderRadius: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  notificationExpanded: {
     borderRadius: 10,
-   
-    
+    paddingRight: 16,
   },
   notificationText: {
     color: 'white',
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 'bold',
-    textAlign: 'center',
+    marginLeft: 8,
+    maxWidth: 250,
+    flexShrink: 1,
   },
   headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom: 30,
+    marginBottom: 10,
   },
   header: {
-    fontSize: 34, 
+    fontSize: 34,
     fontWeight: 'bold',
     color: '#222',
-    textAlign: 'center',
-    marginLeft: 10, 
-    textShadowColor: '#999', 
+    marginLeft: 10,
+    textShadowColor: '#999',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 6,
   },
