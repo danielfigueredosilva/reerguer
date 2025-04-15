@@ -1,18 +1,26 @@
-import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
-import { useState } from 'react';
+import { View, Text, StyleSheet, ScrollView, Pressable, Animated } from 'react-native';
+import { useState, useRef, useEffect } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { DashboardCard } from '../../../components/DashBoardCard';
 
 export default function Dashboard() {
   const [showNotificationText, setShowNotificationText] = useState(false);
+  const fadeAnim = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    Animated.timing(fadeAnim, {
+      toValue: showNotificationText ? 1 : 0,
+      duration: 1000,
+      useNativeDriver: true,
+    }).start();
+  }, [showNotificationText]);
 
   return (
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.headerContainer}>
-        <Ionicons name="cloud" size={30} color="#FF6347" />
+        <Ionicons name="warning" size={30} color="#FF6347" />
         <Text style={styles.header}>SOS Chuvas</Text>
-        
         <Ionicons name="warning" size={30} color="#FF6347" />
       </View>
 
@@ -26,11 +34,13 @@ export default function Dashboard() {
           ]}
         >
           <Ionicons name="warning" size={24} color="white" />
-          {showNotificationText && (
-            <Text style={styles.notificationText}>
-              Alerta: Risco de enchente em [Cidade]
-            </Text>
-          )}
+          <Animated.View style={{ opacity: fadeAnim }}>
+            {showNotificationText && (
+              <Text style={styles.notificationText}>
+                Alerta: Risco de enchente em Recife
+              </Text>
+            )}
+          </Animated.View>
         </Pressable>
       </View>
 
@@ -83,6 +93,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   header: {
+    marginRight: 10,
     fontSize: 34,
     fontWeight: 'bold',
     color: '#222',
