@@ -8,10 +8,10 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false, // Oculta o cabeçalho em todas as abas
-        tabBarActiveTintColor: '#1E90FF', // Cor do ícone ativo
-        tabBarInactiveTintColor: '#aaa', // Cor do ícone inativo
+        tabBarActiveTintColor: '#ccc', // Cor do ícone ativo
+        tabBarInactiveTintColor: '#fff', // Cor do ícone inativo
         tabBarStyle: {
-          backgroundColor: '#121212', // Cor de fundo da barra de abas
+          backgroundColor: '#1E90FF', // Cor de fundo da barra de abas
           borderTopColor: '#333', // Borda superior da tab bar
         },
         tabBarLabelStyle: {
@@ -34,7 +34,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="oferecer_ajuda/index"
         options={{
-          title: 'Ajuda',
+          title: 'Ajudar',
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="volunteer-activism" size={size} color={color} />
           ),

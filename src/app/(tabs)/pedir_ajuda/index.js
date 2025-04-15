@@ -39,6 +39,7 @@ export default function Pedir_ajuda() {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>Pedir Ajuda</Text>
       <DropdownMenu
         label="Selecione o tipo de necessidade"
         options={tiposDeNecessidade}
@@ -49,9 +50,7 @@ export default function Pedir_ajuda() {
         onSubmit={handleSubmit}
       />
 
-      {pedidos.map((pedido, index) => (
-        <Text key={index}>• {pedido.tipo}: {pedido.descricao}</Text>
-      ))}
+     
 
       <Button title="Ver Pedidos" onPress={irParaTelaDePedidos} />
     </View>
@@ -63,5 +62,14 @@ const styles = StyleSheet.create({
     padding: 20,
     flex: 1,
     justifyContent: 'center',
+    alignItems:'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    padding:50,
+    
+  
+    
   },
 });

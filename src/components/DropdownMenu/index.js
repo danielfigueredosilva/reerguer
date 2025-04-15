@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   button: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#1E90FF',
     padding: 12,
     borderRadius: 8,
     minWidth: 200,
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   modalOverlay: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: 'rgba(0,0,0,0.4)',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
     paddingHorizontal: 40,
     paddingBottom: 100,
   },
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   // pedidos textos
   optionText: {
     fontSize: 16,
-    color: '#333',
+    color: 'dar',
   },
   input: {
     height: 40,
@@ -106,21 +106,22 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 20,
     paddingHorizontal: 10,
+    placeholder: 'black',
   },
   submitButton: {
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#1E90FF',
     padding: 12,
     borderRadius: 8,
     alignItems: 'center',
   },
   selectedOption: {
-    backgroundColor: '#e0f7e9', // destaque com fundo verde claro
+    backgroundColor: '#1E90FF', // destaque com fundo verde claro
     borderRadius: 8,
   },
   
   selectedOptionText: {
     fontWeight: 'bold',
-    color: '#2e7d32', // texto verde escuro
+    color: '#fff', // texto verde escuro
   },
   
 });

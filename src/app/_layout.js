@@ -8,7 +8,7 @@ export default function Layout() {
       // Opções aplicadas a todas as telas dentro deste Stack
       screenOptions={{
         headerStyle: {
-          backgroundColor: '#121212', // Cor de fundo do header
+          backgroundColor: '#1E90FF', // Cor de fundo do header
         },
         headerTintColor: '#fff', // Cor do texto e ícones do header
         headerBackVisible: false, // Oculta o botão de voltar (mais elegante que headerLeft: () => null)

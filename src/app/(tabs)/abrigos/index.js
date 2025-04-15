@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
-import { Link } from 'expo-router';
+
 
 // Dados fictícios dos abrigos
 const abrigos = [
@@ -38,11 +38,6 @@ export default function AbrigosScreen() {
         )}
         keyExtractor={(item) => item.id}
       />
-
-      {/* Link para voltar à tela inicial */}
-      <Link href="/dashboard" style={styles.link}>
-        <Text style={styles.linkText}>Voltar para tela inicial</Text>
-      </Link>
     </View>
   );
 }
@@ -59,6 +54,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
+    paddingTop:15,
   },
   item: {
     backgroundColor: '#fff',
