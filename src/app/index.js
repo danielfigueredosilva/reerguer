@@ -3,6 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet, Alert } from 'react-native';
 // Importa o React e o useState para manipular estado (variáveis controladas)
 import React, { useState } from 'react';
 // Importa o hook useRouter do expo-router para navegar entre páginas
+
 import { useRouter } from 'expo-router';
 import { CustomButton } from '../components/CustomButton';
 
