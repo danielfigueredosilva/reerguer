@@ -19,6 +19,10 @@ export default function Layout() {
 
       {/* Telas avulsas (caso sejam acessadas diretamente sem abas) */}
       <Stack.Screen name="dashboard" options={{ title: 'Dashboard' }} />
+
+      <Stack.Screen name="pedir_ajuda" options={{ title: 'Pedir Ajuda'}}/>
+
+      <Stack.Screen name="oferecer_ajuda" options={{ title: 'Oferecer Ajuda'}}/>
     
       {/* Área de navegação com abas (Tabs). O header será controlado lá dentro. */}
       <Stack.Screen
