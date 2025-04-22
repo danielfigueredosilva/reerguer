@@ -4,10 +4,10 @@ import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native
 
 // Dados fictícios dos abrigos
 const abrigos = [
-  { id: '1', nome: 'Abrigo São José', endereco: 'Rua A, 123', distancia: '1.2 km' },
-  { id: '2', nome: 'Abrigo da Esperança', endereco: 'Rua B, 456', distancia: '2.5 km' },
-  { id: '3', nome: 'Casa de Acolhimento Vida Nova', endereco: 'Rua C, 789', distancia: '3.0 km' },
-  { id: '4', nome: 'Abrigo Vida Digna', endereco: 'Rua D, 101', distancia: '0.8 km' },
+  { id: '1', nome: 'Abrigo Dantas Barreto', endereco: 'Rua Visconde silva, 123', distancia: '1.2 km' },
+  { id: '2', nome: 'Abrigo Casa amarela esperança', endereco: 'Av General justos, 456', distancia: '2.5 km' },
+  { id: '3', nome: 'Casa de Acolhimento Barros lima', endereco: 'Rua Real da torre, 789', distancia: '3.0 km' },
+  { id: '4', nome: 'Abrigo Mãos Amigas', endereco: 'Av General polidoro, 101', distancia: '0.8 km' },
 ];
 
 // Componente de Item da FlatList
